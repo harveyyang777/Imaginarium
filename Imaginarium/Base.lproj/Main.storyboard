@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,16 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-Se-zn6">
-                                <rect key="frame" x="167.5" y="284" width="39" height="30"/>
+                                <rect key="frame" x="167.5" y="284" width="50" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wgD-VX-hcc">
-                                        <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-di-ZZu">
-                                                <rect key="frame" x="0.0" y="0.0" width="39" height="30"/>
-                                                <state key="normal" title="face2"/>
-                                            </button>
-                                        </subviews>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -37,27 +30,14 @@
                                     <constraint firstItem="wgD-VX-hcc" firstAttribute="centerY" secondItem="Oca-Se-zn6" secondAttribute="centerY" id="iQb-rx-AFK"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5k-Ce-JVs">
-                                <rect key="frame" x="167.5" y="434" width="39" height="30"/>
-                                <state key="normal" title="face3"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V1A-tm-czX">
-                                <rect key="frame" x="167" y="171" width="37" height="30"/>
+                                <rect key="frame" x="167" y="171" width="50" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A83-Qv-cqz">
-                                        <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-vo-U6q">
-                                                <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLy-Fk-NyG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
-                                                        <state key="normal" title="face1"/>
-                                                        <connections>
-                                                            <segue destination="2rh-T6-4OO" kind="push" identifier="face1" id="D4e-Cb-TWY"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -66,10 +46,15 @@
                                     <constraint firstItem="A83-Qv-cqz" firstAttribute="centerX" secondItem="V1A-tm-czX" secondAttribute="centerX" id="1XS-in-EmQ"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV1-8D-Ygc">
+                                <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
+                                <state key="normal" title="pic2"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="i5k-Ce-JVs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Itp-EB-8Sm"/>
+                            <constraint firstItem="IV1-8D-Ygc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FFh-Xn-XH7"/>
+                            <constraint firstItem="IV1-8D-Ygc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eIJ-1U-pg3"/>
                             <constraint firstItem="Oca-Se-zn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xze-s4-wYS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -135,7 +120,4 @@
             <point key="canvasLocation" x="-260" y="117"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="P0q-X6-y1N"/>
-    </inferredMetricsTieBreakers>
 </document>

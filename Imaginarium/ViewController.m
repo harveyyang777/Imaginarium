@@ -20,12 +20,16 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    
+    
     if([segue.destinationViewController isKindOfClass:[ImageViewController class]]){
         ImageViewController *ivc = (ImageViewController *)segue.destinationViewController;
-        ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.faceplusplus.com.cn/images/attributes/attributes.jpg"]];
+        ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://handluggageonly.co.uk/wp-content/uploads/2015/07/london-2276021.jpg"]];
         ivc.title = segue.identifier;
+        
+    }
     
-}
 }
 
 
