@@ -22,16 +22,23 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
     
-    
-    if([segue.destinationViewController isKindOfClass:[ImageViewController class]]){
-        ImageViewController *ivc = (ImageViewController *)segue.destinationViewController;
-        ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://handluggageonly.co.uk/wp-content/uploads/2015/07/london-2276021.jpg"]];
-        ivc.title = segue.identifier;
-        
+    if([segue.identifier isEqualToString:@"pic1"]){
+        NSLog(@"click PIC1");
+        if([segue.destinationViewController isKindOfClass:[ImageViewController class]]){
+            ImageViewController *ivc = (ImageViewController *)segue.destinationViewController;
+            ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://handluggageonly.co.uk/wp-content/uploads/2015/07/london-2276021.jpg"]];
+            ivc.title = segue.identifier;
+            
+        }
+    }else if ([segue.identifier isEqualToString:@"pic2"]){
+        NSLog(@"click pic2");
+        if([segue.destinationViewController isKindOfClass:[ImageViewController class]]){
+            ImageViewController *ivc = (ImageViewController *)segue.destinationViewController;
+            ivc.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://img.25pp.com/uploadfile/bizhi/iphone6p/20160601/1464744706278044_390x690.jpeg"]];
+            ivc.title = segue.identifier;
+        }
     }
-    
 }
-
 
 
 

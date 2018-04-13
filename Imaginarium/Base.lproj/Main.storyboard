@@ -49,6 +49,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV1-8D-Ygc">
                                 <rect key="frame" x="172.5" y="318.5" width="30" height="30"/>
                                 <state key="normal" title="pic2"/>
+                                <connections>
+                                    <segue destination="2rh-T6-4OO" kind="push" identifier="pic2" id="gxX-Bj-y8Q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,7 +65,7 @@
                     <navigationItem key="navigationItem" id="49r-BC-jco">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="cQc-H7-NrM">
                             <connections>
-                                <segue destination="2rh-T6-4OO" kind="push" identifier="item" id="P0q-X6-y1N"/>
+                                <segue destination="2rh-T6-4OO" kind="push" identifier="pic1" id="P0q-X6-y1N"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -79,6 +82,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VMo-xJ-sxT">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KWT-WL-gYg">
                                 <rect key="frame" x="0.0" y="59" width="359" height="616"/>
                             </scrollView>
@@ -86,15 +93,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KWT-WL-gYg" firstAttribute="leading" secondItem="T73-6L-HFf" secondAttribute="leading" id="0ws-lF-HLl"/>
+                            <constraint firstItem="VMo-xJ-sxT" firstAttribute="centerX" secondItem="T73-6L-HFf" secondAttribute="centerX" id="2sD-iA-8Lw"/>
                             <constraint firstAttribute="bottomMargin" secondItem="KWT-WL-gYg" secondAttribute="bottom" constant="-8" id="Oa5-Zw-4LX"/>
                             <constraint firstItem="KWT-WL-gYg" firstAttribute="trailing" secondItem="T73-6L-HFf" secondAttribute="trailingMargin" id="RaO-rd-Rdr"/>
                             <constraint firstItem="KWT-WL-gYg" firstAttribute="top" secondItem="T73-6L-HFf" secondAttribute="topMargin" constant="-5" id="c0E-K4-chX"/>
+                            <constraint firstItem="VMo-xJ-sxT" firstAttribute="centerY" secondItem="T73-6L-HFf" secondAttribute="centerY" id="wHm-Ki-RCN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hbb-fG-HqT"/>
                     </view>
                     <navigationItem key="navigationItem" id="YiV-Mk-gXG"/>
                     <connections>
                         <outlet property="scrollView" destination="KWT-WL-gYg" id="4hH-AO-Yqz"/>
+                        <outlet property="spinner" destination="VMo-xJ-sxT" id="K74-c4-FG7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89U-EV-k1o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,4 +130,7 @@
             <point key="canvasLocation" x="-260" y="117"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="P0q-X6-y1N"/>
+    </inferredMetricsTieBreakers>
 </document>
